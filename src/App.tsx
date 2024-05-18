@@ -6,6 +6,25 @@ const App = () => {
     const [numbers, setNumbers] = useState<number[]>([5, 11, 16, 23, 32]);
 
     const changeNumbers = () => {
+        const change = () => {
+            let newNumbers: number[] = [];
+            while (newNumbers) {
+                const newNumber: number = Math.floor(Math.random() * (36 - 5 + 1)) + 5;
+                if (newNumbers.length === 5) {
+                    break;
+                } else {
+                    if (!newNumbers.includes(newNumber)) {
+                        newNumbers.push(newNumber);
+                        newNumbers.sort(function (a: number, b: number){
+                            return a - b;
+                        });
+                    }
+                }
+            }
+            return newNumbers;
+        };
+
+        setNumbers(change());
     }
 
     return (
