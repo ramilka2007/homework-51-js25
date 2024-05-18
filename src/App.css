@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+button:hover {
+  box-shadow: 0 0 39px 0 grey;
+  transition: 1s;
+}
+
 .CircleNumber {
   display: inline-block;
   padding-top: 25px;
